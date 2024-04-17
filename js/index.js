@@ -25,9 +25,15 @@ const getColor = {
 let fruitsJSON = `[
   {"kind": "Мангустин", "color": "фиолетовый", "weight": 13},
   {"kind": "Дуриан", "color": "зеленый", "weight": 35},
-  {"kind": "Личи", "color": "красный", "weight": 17}
+  {"kind": "Личи", "color": "красный", "weight": 17},
+  {"kind": "Карамбола", "color": "желтый", "weight": 28},
+  {"kind": "Тамаринд", "color": "зеленый", "weight": 22}
 ]`;
 
+/*** 
+{"kind": "Карамбола", "color": "оранжевый", "weight": 28},
+  {"kind": "Тамаринд", "color": "коричневый", "weight": 22}
+***/
 // преобразование JSON в объект JavaScript
 let fruits = JSON.parse(fruitsJSON);
 let fruitsAll = fruits;
@@ -109,7 +115,7 @@ shuffleButton.addEventListener("click", () => {
 
 // фильтрация массива
 const filterFruits = () => {
-  const save = fruitsAll;
+  let save = fruitsAll;
   let result = [];
   let min = document.querySelector(".minweight__input").value;
   let max = document.querySelector(".maxweight__input").value;
